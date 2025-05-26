@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="./images/logo.png" alt="Nirvana Logo" width="120" height="62" class="header-logo-image">
+        </a>
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="/page1.html" class="header-menu-link">о студии</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page2.html" class="header-menu-link">направления</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page3.html" class="header-menu-link">стоимость</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page4.html" class="header-menu-link">расписание</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page5.html" class="header-menu-link">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions"></div>
+    </header>
+
+    <main class="content2">
+        <section class="intro">
+            <div class="intro-text">
+                Занятия йогой способствуют расслаблению, снижению стресса и повышению осознанности, в то время как пилатес акцентирует внимание на укреплении глубоких мышц, улучшении осанки и координации движений.
+            </div>
+            <div class="intro-images">
+                <img src="./images/yoga_collage.png" alt="Йога позы">
+            </div>
+        </section>
+
+        <section class="halls">
+            <div class="hall">
+                <img src="./images/hall_classic.png" alt="Классический зал">
+                <p>классический зал</p>
+            </div>
+            <div class="hall">
+                <img src="./images/hall_hot.png" alt="Горячий зал">
+                <p>горячий зал</p>
+            </div>
+            <div class="hall">
+                <img src="./images/hall_private.png" alt="Зал индивидуальных тренировок">
+                <p>зал индивидуальных тренировок</p>
+            </div>
+        </section>
+
+        <ul class="footer-contacts">
+            <li>inst: @nirvanaforyou</li>
+            <li>telegram: @nirvanaforyou</li>
+            <li>телефон: +79817256372</li>
+        </ul>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const currentPath = window.location.pathname;
+          const navLinks = document.querySelectorAll('.header-menu-link');
+
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+              link.classList.add('active');
+            }
+          });
+        });
+    </script>
+</body>
+</html>

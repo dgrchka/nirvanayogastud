@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="./images/logo.png" alt="Nirvana Logo" width="120" height="62" class="header-logo-image">
+        </a>
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="/page1.html" class="header-menu-link is-current">о студии</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page2.html" class="header-menu-link">направления</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page3.html" class="header-menu-link">стоимость</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page4.html" class="header-menu-link">расписание</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/page5.html" class="header-menu-link">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions"></div>
+    </header>
+
+    <main class="content3">
+        <section class="title">
+            <div class="title-text">
+                С каждым занятием йогой мы не только<br>
+                укрепляем тело, но и душу.
+            </div>
+        </section>
+    
+        <div class="halls-container">
+            <!-- Первый ряд -->
+            <div class="halls-row">
+                <div class="hall">
+                    <img src="./images/hata.png" alt="Хатха-йога">
+                    <p>хатха-йога</p>
+                </div>
+                <div class="hall">
+                    <img src="./images/stretching.png" alt="Растяжка">
+                    <p>растяжка</p>
+                </div>
+                <div class="hall">
+                    <img src="./images/stretching2.png" alt="Здоровая спина">
+                    <p>здоровая спина</p>
+                </div>
+            </div>
+    
+            <!-- Второй ряд -->
+            <div class="halls-row">
+                <div class="hall">
+                    <img src="./images/yoga2.png" alt="Силовая йога">
+                    <p>силовая йога</p>
+                </div>
+                <div class="hall">
+                    <img src="./images/pilates.png" alt="Пилатес">
+                    <p>пилатес</p>
+                </div>
+                <div class="hall">
+                    <img src="./images/empty.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <ul class="footer-contacts">
+        <li>inst: @nirvanaforyou</li>
+        <li>telegram: @nirvanaforyou</li>
+        <li>телефон: +79817256372</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const currentPath = window.location.pathname;
+          const navLinks = document.querySelectorAll('.header-menu-link');
+
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+              link.classList.add('active');
+            }
+          });
+        });
+    </script>
+</body>
+</html>
